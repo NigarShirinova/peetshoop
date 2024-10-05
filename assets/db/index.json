@@ -1,0 +1,108 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Dog Collar",
+      "price": 15.99,
+      "photo": "./assets/media/photo1.jpg",
+      "rating": 4.5,
+      "description": "Durable nylon dog collar with adjustable buckle."
+    },
+    {
+      "id": 2,
+      "name": "Cat Scratching Post",
+      "price": 25.99,
+      "photo": "./assets/media/photo2.jpg",
+      "rating": 4.7,
+      "description": "Tall scratching post to keep your cat entertained."
+    },
+    {
+      "id": 3,
+      "name": "Aquarium Starter Kit",
+      "price": 59.99,
+      "photo": "./assets/media/photo3.jpg",
+      "rating": 4.3,
+      "description": "Complete kit for setting up a freshwater aquarium."
+    },
+    {
+      "id": 4,
+      "name": "Bird Cage",
+      "price": 75.49,
+      "photo": "./assets/media/photo4.jpg",
+      "rating": 4.6,
+      "description": "Spacious bird cage with a removable tray for easy cleaning."
+    },
+    {
+      "id": 5,
+      "name": "Hamster Wheel",
+      "price": 12.99,
+      "photo": "./assets/media/photo5.jpg",
+      "rating": 4.1,
+      "description": "Silent-running wheel for small rodents."
+    },
+    {
+      "id": 6,
+      "name": "Fish Food Flakes",
+      "price": 9.99,
+      "photo": "./assets/media/photo6.jpg",
+      "rating": 4.8,
+      "description": "Nutrient-rich flakes for tropical and freshwater fish."
+    },
+    {
+      "id": 7,
+      "name": "Dog Bed",
+      "price": 34.99,
+      "photo": "./assets/media/photo7.jpg",
+      "rating": 4.4,
+      "description": "Comfortable, soft bed for dogs of all sizes."
+    },
+    {
+      "id": 8,
+      "name": "Cat Litter Box",
+      "price": 22.50,
+      "photo": "./assets/media/photo8.jpg",
+      "rating": 4.2,
+      "description": "Easy-to-clean litter box with high sides to prevent mess."
+    },
+    {
+      "id": 9,
+      "name": "Bird Seed Mix",
+      "price": 10.99,
+      "photo": "./assets/media/photo9.jpg",
+      "rating": 4.5,
+      "description": "Premium seed mix for a variety of bird species."
+    },
+    {
+      "id": 10,
+      "name": "Rabbit Hutch",
+      "price": 89.99,
+      "photo": "./assets/media/photo10.jpg",
+      "rating": 4.7,
+      "description": "Outdoor rabbit hutch with a safe and spacious design."
+    },
+    {
+      "id": 11,
+      "name": "Reptile Heat Lamp",
+      "price": 19.99,
+      "photo": "./assets/media/photo11.jpg",
+      "rating": 4.6,
+      "description": "Heat lamp designed for reptiles in terrariums."
+    },
+    {
+      "id": 12,
+      "name": "Cat Toy Mouse",
+      "price": 5.99,
+      "photo": "./assets/media/photo12.jpg",
+      "rating": 4.3,
+      "description": "Interactive cat toy in the shape of a mouse."
+    },
+    {
+      "id": 13,
+      "name": "Dog Chew Bone",
+      "price": 7.99,
+      "photo": "./assets/media/photo13.jpg",
+      "rating": 4.4,
+      "description": "Long-lasting chew bone for dogs to promote dental health."
+    }
+  ]
+}

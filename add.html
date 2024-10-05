@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Card</title>
+    <style>
+        body {
+            background-color: #F7FAF9; /* Light background */
+            font-family: Arial, sans-serif;
+            color: #2F4F2F; /* Dark green text */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1B3A25; /* Darker green for header */
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #E6F0DC; /* Light green form background */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #C4D6A0; /* Soft green border */
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45A049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a New Card</h1>
+    <form id="addForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="text" id="photo" placeholder="Image URL" required>
+        <button type="submit">Add Card</button>
+    </form>
+    <script>
+        document.getElementById('addForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const newCard = {
+                name: document.getElementById('name').value,
+                price: parseFloat(document.getElementById('price').value),
+                description: document.getElementById('description').value,
+                photo: document.getElementById('photo').value,
+                rating: 0, // Default value, or adjust as needed
+                id: Date.now() // Using timestamp as a unique id
+            };
+            // Save the new card to local storage or API
+            const cards = JSON.parse(localStorage.getItem('cards')) || [];
+            cards.push(newCard);
+            localStorage.setItem('cards', JSON.stringify(cards));
+            alert('Card added successfully!');
+            window.location.href = 'index.html'; 
+        });
+    </script>
+</body>
+</html>

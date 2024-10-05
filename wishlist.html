@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #F7FAF9;
+            font-family: Arial, sans-serif;
+            color: #2F4F2F;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1B3A25;
+        }
+        #wishlistContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .wishlist-card {
+            background-color: #E6F0DC;
+            border: 1px solid green;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+        }
+        .wishlist-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Wishlist</h1>
+    <div id="wishlistContainer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const wishlistContainer = document.getElementById("wishlistContainer");
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+            wishlist.forEach(card => {
+                const cardElement = document.createElement("div");
+                cardElement.className = "wishlist-card";
+                cardElement.innerHTML = `
+                    <h3>${card.name}</h3>
+                    <p>Price: $${card.price.toFixed(2)}</p>
+                    <p>Description: ${card.description}</p>
+                    <img src="${card.photo}" alt="${card.name}">
+                `;
+                wishlistContainer.appendChild(cardElement);
+            });
+
+            if (wishlist.length === 0) {
+                wishlistContainer.innerHTML = "<p>Your wishlist is empty.</p>";
+            }
+        });
+    </script>
+</body>
+</html>
